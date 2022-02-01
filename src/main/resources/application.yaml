@@ -4,5 +4,19 @@ spring:
       client:
         registration:
           github:
-            client-id: <client-id>
-            client-secret: <client-secret>
+            client-id: <cid>
+            client-secret: <csecr>
+  data:
+    cassandra:
+      keyspace-name: main
+      username: <uname>
+      password: <pwd>
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+datastax.astra:
+  secure-connect-bundle: file:./src/main/resources/secure-connect-allbookslibrary.zip

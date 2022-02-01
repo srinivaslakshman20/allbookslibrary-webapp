@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,16 +17,19 @@
             crossorigin="anonymous"
     ></script>
 </head>
+
 <body>
-<h1>All Books Library</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-bottom: 20px"
+     xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">All Books Library</a>
+    </div>
+</nav>
 
-<p>Welcome to all books library. This website is hosting all books that are published.</p>
 
-<br>
 <div th:insert="components/book-search :: search-panel"></div>
 
-<div>
-    Login to continue: <a href="/oauth2/authorization/github">click here</a>
-</div>
+<h2>Book Not Found</h2>
+
 </body>
 </html>
